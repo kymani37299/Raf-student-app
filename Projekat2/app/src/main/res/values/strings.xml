@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Projekat2</string>
+    <string name="fragment_raspored_title">Raspored</string>
+    <string name="fragment_chat_title">Chat</string>
+    <string name="fragment_wall_title">Wall</string>
+    <string name="app_file_provider" translatable="false">Android/data/com.example.projekat2.fileprovider</string>
+</resources>
