@@ -10,68 +10,70 @@
         android:id="@+id/rv_chat_messages"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@id/ll_chat_1"
+        android:layout_above="@id/cv_chat_1"
         tools:itemCount="12" />
-
-    <LinearLayout
-        android:id="@+id/ll_chat_1"
-        android:padding="5dp"
-        android:layout_alignParentBottom="true"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_chat_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#fff">
+        android:layout_alignParentBottom="true"
+        app:cardBackgroundColor="#fff">
+        <LinearLayout
+            android:id="@+id/ll_chat_1"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/iv_chat_add_picture"
-            android:visibility="gone"
-            android:layout_margin="5dp"
-            android:layout_gravity="center"
-            android:src="@drawable/ic_add_black_24dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/iv_chat_add_picture"
+                android:visibility="gone"
+                android:layout_margin="5dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_add_black_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-        <EditText
-            android:id="@+id/et_chat_text"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/et_chat_text"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-        <ImageView
-            android:id="@+id/iv_chat_send"
-            android:src="@drawable/ic_send_black_24dp"
-            android:padding="10dp"
-            android:layout_width="50dp"
-            android:layout_height="50dp" />
+            <ImageView
+                android:id="@+id/iv_chat_send"
+                android:src="@drawable/ic_send_black_24dp"
+                android:padding="10dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:padding="20dp"
+    <androidx.cardview.widget.CardView
         android:id="@+id/ll_chat_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:background="#aaa"
-        android:orientation="vertical"
+        app:cardBackgroundColor="@color/c4"
         android:visibility="gone">
-
-        <TextView
-            android:layout_margin="10dp"
-            android:text="Uploading..."
+        <LinearLayout
+            android:padding="20dp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-        <ProgressBar
-            android:layout_margin="10dp"
-            android:id="@+id/pb_chat_loading"
-            style="?android:progressBarStyleHorizontal"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:progressDrawable="@drawable/circle_progress"/>
+            <TextView
+                android:layout_margin="10dp"
+                android:text="Uploading..."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-
-    </LinearLayout>
-
-
-
+            <ProgressBar
+                android:layout_margin="10dp"
+                android:id="@+id/pb_chat_loading"
+                style="?android:progressBarStyleHorizontal"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:progressDrawable="@drawable/circle_progress"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 </RelativeLayout>

@@ -39,23 +39,25 @@ public class UserRepository {
         return currentUserLiveData;
     }
 
-    public void login(User user) {
-        String index = user.getIndex();
-        String name = user.getName();
+    public void createUser(User user) {
+        usersReference.child(user.getIndex()).setValue(user);
+    }
 
-        if(index==null || name==null) {
+    public void login(String index) {
+        if(index==null) {
             return;
         }
+//        UserLiveData u = new UserLiveData(index);
 
-        UserLiveData u = new UserLiveData(index);
+        currentUserLiveData.setIndex(index);
 
-        if(u.getValue() == null || u.getValue().getName().equals(name)) {
-            usersReference.child(index).setValue(new User(index,name));
-            currentUserLiveData.setIndex(index);
-            SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.putString("index",index);
-            editor.commit();
-        }
+//        if(u.getValue() == null || u.getValue().getName().equals(name)) {
+//            usersReference.child(index).setValue(new User(index,name));
+//            currentUserLiveData.setIndex(index);
+////            SharedPreferences.Editor editor = sharedPreferences.edit();
+////            editor.putString("index",index);
+////            editor.commit();
+//        }
     }
 
 }

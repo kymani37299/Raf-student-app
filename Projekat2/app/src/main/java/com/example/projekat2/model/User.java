@@ -14,13 +14,16 @@ public class User {
 
     private String name;
 
+    private String password;
+
     public User() {
 
     }
 
-    public User(String index, String name) {
+    public User(String index, String password,String name) {
         this.index = index;
         this.name = name;
+        this.password = password;
     }
 
 
@@ -38,6 +41,14 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     @Override

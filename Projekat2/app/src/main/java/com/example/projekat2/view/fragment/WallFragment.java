@@ -31,6 +31,7 @@ import com.example.projekat2.viewmodel.UserViewModel;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
@@ -53,7 +54,7 @@ public class WallFragment extends Fragment {
     private ImageView ivSend;
     private ImageView ivAddPicture;
     private ProgressBar pbLoading;
-    private LinearLayout llLoading;
+    private CardView llLoading;
 
     private UserViewModel userViewModel;
     private MessageViewModel messageViewModel;
@@ -133,7 +134,7 @@ public class WallFragment extends Fragment {
             adapter.setUsers(indexNameMap);
         }));
 
-        imageViewModel.getUploadPhotoLiveData().observe(this,(uploadResult) -> {
+        imageViewModel.getUploadPhotoLiveData().observe(getActivity(),(uploadResult) -> {
             switch(uploadResult.getUploadStatus()) {
                 case UploadResult.STATUS_SUCCESS:
                     setLoadingState(false);

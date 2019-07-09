@@ -3,12 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="10dp">
-
     <LinearLayout
         android:orientation="vertical"
         android:padding="10dp"
         android:layout_gravity="right"
-        android:background=" #3C66FB"
+        android:background="@color/c2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <TextView

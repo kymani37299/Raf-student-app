@@ -20,8 +20,8 @@ public class UserViewModel extends AndroidViewModel {
         repo = new UserRepository(application);
     }
 
-    public void login(User user) {
-        repo.login(user);
+    public void login(String index) {
+        repo.login(index);
     }
 
     public UserLiveData getUser(String index) {
@@ -34,5 +34,9 @@ public class UserViewModel extends AndroidViewModel {
 
     public UserCollectionLiveData getAllUsers() {
         return repo.getAllUsers();
+    }
+
+    public void createUser(User user) {
+        repo.createUser(user);
     }
 }

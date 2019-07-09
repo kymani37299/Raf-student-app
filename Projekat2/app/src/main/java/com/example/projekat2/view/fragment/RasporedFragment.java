@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 
 import com.example.projekat2.R;
@@ -29,7 +30,7 @@ public class RasporedFragment extends Fragment {
     private Spinner spDan;
     private RecyclerView rvCasovi;
     private EditText etFilter;
-    private Button btnTrazi;
+    private ImageView ivTrazi;
 
     private CasoviAdapter casoviAdapter;
     private ArrayAdapter<String> grupeAdapter;
@@ -65,7 +66,7 @@ public class RasporedFragment extends Fragment {
         spDan = v.findViewById(R.id.sp_raspored_dan);
         rvCasovi = v.findViewById(R.id.rv_raspored_casovi);
         etFilter = v.findViewById(R.id.et_raspored_filter);
-        btnTrazi = v.findViewById(R.id.btn_raspored_trazi);
+        ivTrazi = v.findViewById(R.id.btn_raspored_trazi);
 
         viewModel = ViewModelProviders.of(getActivity()).get(CasoviViewModel.class);
     }
@@ -111,7 +112,7 @@ public class RasporedFragment extends Fragment {
             public void onNothingSelected(AdapterView<?> parent) {}
         });
 
-        btnTrazi.setOnClickListener((v) -> {
+        ivTrazi.setOnClickListener((v) -> {
             filterText = etFilter.getText().toString().trim();
             updateFilter();
         });
