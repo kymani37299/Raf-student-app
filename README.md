@@ -15,7 +15,7 @@ Schedule is saved at local database,and updated when there is connection with th
 There are multiple filters and when you click some of the attributes of period it will show you
 all periods with that attribute.
 
-<img src="images/Raspored-filter.png" alt="Schedule" width="400" height="600">
+<img src="images/Raspored.png" alt="Schedule" width="400" height="600">
 
 ## Chat
 
